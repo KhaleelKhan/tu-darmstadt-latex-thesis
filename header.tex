@@ -40,7 +40,7 @@
 \usepackage{psfrag}
 
 % bibliography with biblatex
-\usepackage[style=numeric, firstinits=true, backend=bibtex]{biblatex}
+\usepackage[style=numeric, giveninits=true, backend=bibtex]{biblatex}
 % same style for URLs
 \urlstyle{same}
 % title not italic
@@ -52,7 +52,15 @@
 % seperate last author with semicolon
 \renewcommand{\finalnamedelim}{\addsemicolon\space}
 % format name
-\DeclareNameFormat{default}{\usebibmacro{name:last-first}{#1}{#4}{#5}{#7}\usebibmacro{name:andothers}}
+\DeclareNameFormat{default}{%
+	\nameparts{#1}% split the name data, will not be necessary in future versions
+	\usebibmacro{name:last-first}
+		{\namepartfamily}
+		{\namepartgiveni}
+		{\namepartprefix}
+		{\namepartsuffix}%
+	\usebibmacro{name:andothers}%
+}
 % text for url
 \DefineBibliographyStrings{ngerman}{urlseen={abgerufen am}}
 
