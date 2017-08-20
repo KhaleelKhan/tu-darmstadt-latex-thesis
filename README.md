@@ -1,6 +1,6 @@
-# TU Darmstadt LaTex Thesis Template
+# TU Darmstadt LaTex Thesis Template (IES Group)
 
-This was the template for one of my theses at the [TU Darmstadt](http://www.tu-darmstadt.de/index.en.jsp).
+This was the template for thesis at the [TU Darmstadt](http://www.tu-darmstadt.de/index.en.jsp), adapted from another GitHub user [Zemirco](https://github.com/zemirco/tu-darmstadt-latex-thesis). I have modified bibliography to use updated Biblatex(3.3) name formatting. Also added IES logo and modified color scheme.
 
 ## Table of Content
 
@@ -33,13 +33,13 @@ This was the template for one of my theses at the [TU Darmstadt](http://www.tu-d
 
 4. Edit the template from this repo according to your needs
 
-5. Run `latex`
+5. Run `pdflatex`. I am using seperate directory `build` for all build related files. 
 
-6. Run `makeglossaries thesis` from the command line to sort and typeset glossaries and list of acronyms/symbols
+6. Run `makeglossaries thesis` from the command line to sort and typeset glossaries and list of acronyms/symbols. Make sure you run this from `build` directory or where ever `.aux` file is present.
 
-7. Run `biblatex`
+7. Run `biblatex`. This also should be run from `build` directory.
 
-8. Run `latex` for the last time and enjoy the output
+8. Run `pdflatex` for the last time and enjoy the output
 
 ## Features
 
@@ -505,4 +505,5 @@ After
 
 ## Acknowledgements
 
-Clemens v. Loewenich and Johannes Werner for creating the tud classes.
+- Clemens v. Loewenich and Johannes Werner for creating the tud classes.
+- Mirco Zeiss for creating the original repo with readme.
